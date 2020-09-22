@@ -1,0 +1,161 @@
+html
+    box-sizing: border-box
+    background: #fff
+    font-family: 'Fira Sans'
+    font-size: 16px
+    font-weight: 400
+    
+body
+    margin: 0
+    padding: 20px 0
+    
+.magog-gallery
+    width: 100%
+    max-width: 1200px
+    margin: 0 auto
+    overflow: hidden
+    position: relative
+    background: #f6f6f6
+    padding: 0 0 20px
+    
+    &:hover .magog-caption
+        bottom: 0
+    
+.magog-slides
+    width: 100%
+    display: flex
+    flex-wrap: nowrap
+    position: relative
+    top: 0
+    left: 0
+    transition: all 0.35s
+    margin: 0 0 20px
+    
+        
+    
+.magog-slide
+    width: 100%
+    min-width: 100%
+    position: relative
+    overflow: hidden
+    
+    
+    img
+        width: 100%
+        height: auto
+    
+    .magog-caption
+        position: absolute
+        top: auto
+        bottom: -200px
+        left: 0
+        padding: 24px
+        height: 64px
+        box-sizing: border-box
+        background: rgba(1,1,1,0.4)
+        color: #fff
+        width: 100%
+        transition: bottom 0.35s
+        
+        p
+            margin: 0
+    
+.arrows
+    display: flex
+    position: absolute
+    top: 40%
+    width: 100%
+    transition: all 0.35s
+    
+    div
+        width: 40px
+        height: 40px
+        background: rgba(0,0,0,0.4)
+        border-radius: 50%
+        margin: 0 20px 0 0
+        position: absolute
+        cursor: pointer
+        transition: background 0.35s
+        
+        &:hover
+            background: rgba(0,0,0,1)
+    
+    img
+        display: block
+        margin: 0 auto
+        width: 10px
+        height: auto
+        position: relative
+        top: 50%
+        
+    .left
+        left: 20px
+        
+        img
+            transform: translateY(-50%) translateX(-2px) rotate(180deg)
+
+    .right
+        right: 20px
+        
+        img
+            transform: translateY(-50%) translateX(2px)        
+            
+    .inactive
+        
+        &:hover
+            background: rgba(0,0,0,0.4)
+        
+.dot-navigation
+    width: 100%
+    clear: both
+    
+    ul
+        list-style-type: none
+        margin: 0
+        padding: 0
+        text-align: center
+        
+        li
+            width: 12px
+            height: 12px
+            border-radius: 50%
+            margin: 0 4px
+            background: rgba(0,0,0,0.5)
+            text-align: center
+            display: inline-block
+            cursor: pointer
+            transition: background 0.35s
+            
+        li:hover
+            background: rgba(0,0,0,1)
+            
+        li.active
+            cursor: default
+            background: rgba(0,0,0,0.2)
+
+
+            
+@media(min-width:1024px)
+    html
+        font-size: 20px
+        
+    .dot-navigation
+        ul
+            li
+                width: 14px
+                height: 14px
+        
+    .magog-slide
+        .magog-caption
+            height: 88px
+            padding: 32px
+            
+    .arrows
+        top: 45%
+        
+        .left
+            left: 40px
+            
+        .right
+            right: 40px
+    
