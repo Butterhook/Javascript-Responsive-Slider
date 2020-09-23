@@ -12,6 +12,13 @@ let slideShow = document.querySelector('.magog-slides'), // Slideshow container
     currentX = 0; // Starting position of slides
 
 
+// add active class to first slide:
+function setSlider() {
+    slides[0].classList.add('active-slide'); 
+}
+window.onload = setSlider();
+
+
 // --------------------------------------------------------------------------------------------------------
 // SET HEIGHT
 // --------------------------------------------------------------------------------------------------------

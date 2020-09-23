@@ -1,5 +1,6 @@
 .magog-gallery {
   width: 100%;
+  font-family: "Fira Sans", Arial, Helvetica, sans-serif;
   max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
@@ -45,15 +46,15 @@
 .arrows {
   display: flex;
   position: absolute;
-  top: 40%;
+  top: 35%;
   width: 100%;
   transition: all 0.35s; }
   .arrows div {
-    width: 40px;
-    height: 40px;
+    width: 24px;
+    height: 24px;
     background: rgba(0, 0, 0, 0.4);
     border-radius: 50%;
-    margin: 0 20px 0 0;
+    margin: 0;
     position: absolute;
     cursor: pointer;
     transition: background 0.35s; }
@@ -62,18 +63,18 @@
   .arrows img {
     display: block;
     margin: 0 auto;
-    width: 10px;
+    width: 7px;
     height: auto;
     position: relative;
     top: 50%; }
   .arrows .left {
-    left: 20px; }
+    left: 16px; }
     .arrows .left img {
-      transform: translateY(-50%) translateX(-2px) rotate(180deg); }
+      transform: translateY(-50%) translateX(-1px) rotate(180deg); }
   .arrows .right {
-    right: 20px; }
+    right: 16px; }
     .arrows .right img {
-      transform: translateY(-50%) translateX(2px); }
+      transform: translateY(-50%) translateX(1px); }
   .arrows .inactive:hover {
     background: rgba(0, 0, 0, 0.4); }
 
@@ -101,6 +102,23 @@
       cursor: default;
       background: rgba(0, 0, 0, 0.2); }
 
+@media(min-width:600px) {
+  .arrows {
+    top: 45%; }
+    .arrows div {
+      width: 40px;
+      height: 40px; }
+    .arrows img {
+      width: 10px;
+      height: auto; }
+    .arrows .left {
+      left: 40px; }
+      .arrows .left img {
+        transform: translateY(-50%) translateX(-2px) rotate(180deg); }
+    .arrows .right {
+      right: 40px; }
+      .arrows .right img {
+        transform: translateY(-50%) translateX(1px); } }
 @media(min-width:1024px) {
   .dot-navigation ul li {
     width: 14px;
@@ -108,11 +126,4 @@
 
   .magog-slide .magog-caption {
     height: 88px;
-    padding: 32px; }
-
-  .arrows {
-    top: 45%; }
-    .arrows .left {
-      left: 40px; }
-    .arrows .right {
-      right: 40px; } }
+    padding: 32px; } }
